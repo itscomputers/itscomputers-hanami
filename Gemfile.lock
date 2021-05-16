@@ -135,6 +135,8 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (13.0.3)
+    rantly (2.0.0)
+    redcarpet (3.5.1)
     regexp_parser (2.1.1)
     rom (3.3.3)
       concurrent-ruby (~> 1.0)
@@ -196,6 +198,8 @@ DEPENDENCIES
   hanami-webconsole
   pg
   rake
+  rantly
+  redcarpet
   rspec
   shotgun
   slim

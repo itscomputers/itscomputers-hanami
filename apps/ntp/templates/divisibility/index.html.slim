@@ -54,7 +54,7 @@ markdown:
       h4 answer
       p
         strong> #{example.divides? ? "yes" : "no"}:
-        code> #{example.divisor} #{example.divides_symbol} #{example.dividend}
+        code> #{example.result}
 
       ul
         - for connector in example.forward_connectors
@@ -77,7 +77,7 @@ markdown:
         - else
           code> #{example.dividend}
           span> is strictly between
-          code> #{example.divisor} * #{example.multipliers.first}
+          code> #{example.divisor} * #{example.lower_multiplier}
           span> and
-          code> #{example.divisor} * #{example.multipliers.last}
+          code> #{example.divisor} * #{example.upper_multiplier}
 

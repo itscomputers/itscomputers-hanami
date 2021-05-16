@@ -16,7 +16,11 @@ module Ntp::Views::Divisibility
       end
 
       def divides?
-        Ebe::Division.divides? divisor, dividend
+        Ebe.divides? divisor, dividend
+      end
+
+      def result
+        "#{divisor} #{divides_symbol} #{dividend}"
       end
 
       def divides_symbol
@@ -36,11 +40,19 @@ module Ntp::Views::Divisibility
       end
 
       def quotient
-        Ebe::Division.quotient(dividend, divisor)
+        Ebe.quotient(dividend, divisor)
       end
 
       def multipliers
         @multipliers ||= [quotient, quotient + (divisor < 0 ? -1 : 1)].sort_by { |multiplier| multiplier * divisor }
+      end
+
+      def lower_multiplier
+        multipliers.first
+      end
+
+      def upper_multiplier
+        multipliers.last
       end
     end
   end

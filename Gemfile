@@ -6,6 +6,7 @@ gem "hanami-model", git: "https://github.com/hanami/model.git", require: false
 
 gem 'pg'
 gem 'slim'
+gem 'redcarpet'
 
 group :development do
   # Code reloading
@@ -21,6 +22,7 @@ end
 group :test do
   gem 'rspec'
   gem 'capybara'
+  gem 'rantly'
 end
 
 group :production do
