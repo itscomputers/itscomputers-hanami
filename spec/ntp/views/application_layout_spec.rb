@@ -5,6 +5,7 @@ RSpec.describe Ntp::Views::ApplicationLayout, type: :view do
   let(:rendered) { layout.render }
 
   it 'contains application name' do
-    expect(rendered).to include('Ntp')
+    expect(rendered).to include('number theory for programmers')
   end
 end
+

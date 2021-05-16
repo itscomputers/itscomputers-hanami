@@ -41,15 +41,15 @@ markdown:
 .dynamic-example
   h3 example
   h4 question
-  form method="POST"
+  form id="divisibility-example" method="GET"
     span Does
-    input id="divisor" name="divisor" value="#{example.divisor}" type="number" required="true" placeholder="divisor"
+    input id="divisor" name="divisor" value="#{divisor}" type="number" required="true" placeholder="divisor"
     span divide
-    input id="dividend" name="dividend" value="#{example.dividend}" type="number" required="true" placeholder="dividend"
+    input id="dividend" name="dividend" value="#{dividend}" type="number" required="true" placeholder="dividend"
     span ??
     input type="submit" value="submit"
 
-  - if example.divisor && example.dividend
+  - if example
     .answer
       h4 answer
       p
